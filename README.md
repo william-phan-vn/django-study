@@ -1,3 +1,4 @@
+See more at [Django - Fullstack Framework for Python projects](https://william-phan.notion.site/Django-Fullstack-Framework-for-Python-projects-e4068a2596fd43b893c83d8a973497d8)
 ### Create a Django Project and App:
 
 First, make sure you have Django installed. If not, you can install it using:
