@@ -1,78 +1,29 @@
-### Create a Django Project and App:
+## Key features
+### ORM
 
-First, make sure you have Django installed. If not, you can install it using:
+### URL routing
+- To map URLs to views
+- Define how different URLs should be handled
 
-```bash
-pip install Django
-```
+### Template engine
+- To separate the presentation logic from the bussiness logic
+-> Easier to create dynamic and reusable templates.
 
-Then, create a Django project and an app:
+### Authen / Autho
 
-```bash
-django-admin startproject myproject
-cd myproject
-python manage.py startapp myapp
-```
+### Admin interface
+- To quickly create a fully-featured administrative interface for managing data
 
-Replace "myproject" and "myapp" with your desired project and app names.
+### Form handling
+- To simplifies the process of validating and processing user input
 
-### Create model
+### Internationalization and localization
+- To build app that can be translated into multiple languages
 
-Open the models.py file in your app directory (myapp/models.py) and define your model class. For example:
+### Security features
+To protect against common web vulnerabilities like
+- Cross-site scripting (XSS)
+- Cross-site request forgery (CSRF)
 
-```python
-from django.db import models
+Also many functions that make web development faster and more efficient.
 
-class MyModel(models.Model):
-    name = models.CharField(max_length=255)
-    age = models.IntegerField()
-    email = models.EmailField()
-
-    def __str__(self):
-        return self.name
-```
-
-In this example, MyModel has three fields: `name`, `age`, and `email`. 
-
-`models.CharField`, `models.IntegerField`, and `models`.`EmailField` are different types of fields you can use.
-
-
-### Create Database Tables
-
-After defining the model, you need to create database tables based on your models. Run the following commands:
-
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
-
-The makemigrations command creates new migration files based on the changes in your models, and migrate applies those changes to the database.
-
-### Admin Interface (Optional)
-
-To manage your models through Django's admin interface, register your model in the admin.py file in your app directory:
-
-```python
-from django.contrib import admin
-from .models import MyModel
-
-admin.site.register(MyModel)
-```
-
-You can customize the admin interface by creating a class that inherits from admin.ModelAdmin and registering it with your model.
-
-### Use the Model in Views or API:
-
-In your views or API, you can now use your model to interact with the database. For example, you can retrieve all instances of MyModel:
-
-```python
-Copy code
-from django.shortcuts import render
-from .models import MyModel
-
-def my_view(request):
-    data = MyModel.objects.all()
-    return render(request, 'my_template.html', {'data': data})
-```
-
-This example fetches all instances of MyModel from the database
