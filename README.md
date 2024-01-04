@@ -1,3 +1,5 @@
+See more at [Django - Fullstack Framework for Python projects](https://william-phan.notion.site/Django-Fullstack-Framework-for-Python-projects-e4068a2596fd43b893c83d8a973497d8)
+
 ## Key features
 ### ORM
 
